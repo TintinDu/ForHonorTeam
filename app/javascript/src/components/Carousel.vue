@@ -1,27 +1,37 @@
 <template>
-  <p>
-    {{ message }}
-  </p>
+  <carousel :items-to-show="1.5">
+    <slide v-for="slide in 10" :key="slide">
+      {{ slide }}
+    </slide>
+
+    <template #addons>
+      <navigation />
+      <pagination />
+    </template>
+  </carousel>
 </template>
 
 <script>
-import { ref } from 'vue'
+// If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 export default {
-  name: 'Carousel',
-  setup() {
-      const message = ref('Hello Gamers ! Ready to learn how to play ?')
-
-      return {
-        message
-      }
-  }
-}
+  name: 'App',
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
+};
 </script>
 
-<style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
+<style lang="scss">
+
+.slide {
+  height: 100vh;
+  display: block;
 }
+
 </style>
