@@ -8,9 +8,9 @@
 import { ref } from 'vue'
 
 export default {
-  name: 'HelloWorld',
+  name: 'HelloGamers',
   setup() {
-      const message = ref('Hello World')
+      const message = ref('Hello Gamers ! Ready to learn how to play ?')
 
       return {
         message
