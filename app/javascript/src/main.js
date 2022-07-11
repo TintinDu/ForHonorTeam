@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
-import HelloGamers from '@/components/HelloGamers.vue'
+import Carousel from '@/components/Carousel.vue'
 
 export default () => {
     document.addEventListener('DOMContentLoaded', () => {
-        const app = createApp(HelloGamers)
-        app.mount('#vue-app')
+        const app1 = createApp(Carousel)
+        app1.mount('#carousel')
     })
 }

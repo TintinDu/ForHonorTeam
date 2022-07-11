@@ -8,7 +8,7 @@
 import { ref } from 'vue'
 
 export default {
-  name: 'HelloGamers',
+  name: 'Carousel',
   setup() {
       const message = ref('Hello Gamers ! Ready to learn how to play ?')
 
